@@ -1,1 +1,218 @@
+/* =========================
+   BRIGHTLYF CONSULTING THEME
+   ========================= */
 
+/* ROOT COLOR PALETTE */
+:root {
+    --primary-blue: #0b3d91;     /* Deep institutional blue */
+    --dark-blue: #062a63;        /* Navigation / footer blue */
+    --gold: #d4af37;             /* Prestige / highlight gold */
+    --red: #b11226;              /* Alert / emphasis red */
+    --light-bg: #f7f9fc;         /* Soft background */
+    --white: #ffffff;
+    --text-dark: #1a1a1a;
+}
+
+/* GLOBAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+    color: var(--white);
+    text-align: center;
+    padding: 25px 15px;
+    border-bottom: 4px solid var(--gold);
+}
+
+header h1 {
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+}
+
+header p {
+    margin-top: 5px;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* NAVIGATION */
+nav {
+    background-color: var(--dark-blue);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 12px;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: 0.3s ease;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background-color: var(--gold);
+    color: var(--dark-blue);
+}
+
+/* SECTIONS */
+section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+h2 {
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+    border-left: 5px solid var(--gold);
+    padding-left: 10px;
+}
+
+h3 {
+    color: var(--dark-blue);
+    margin-top: 15px;
+}
+
+/* CARDS / BOXES */
+.framework-box {
+    background: var(--white);
+    padding: 20px;
+    margin: 20px 0;
+    border-left: 5px solid var(--primary-blue);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border-radius: 6px;
+}
+
+/* HIGHLIGHT BOX */
+.highlight {
+    background: #fff8e1;
+    border-left: 5px solid var(--gold);
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+/* TABLE STYLING */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: var(--white);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+th {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 14px;
+    text-align: left;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color: #f1f5ff;
+}
+
+/* GALLERY */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.caption {
+    padding: 12px;
+}
+
+.caption h4 {
+    color: var(--primary-blue);
+}
+
+/* BUTTON STYLE (for future CTA use) */
+button, .btn {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 10px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-weight: bold;
+}
+
+button:hover, .btn:hover {
+    background-color: var(--gold);
+    color: var(--dark-blue);
+}
+
+/* RED ACCENT (for warnings / emphasis) */
+.accent-red {
+    color: var(--red);
+    font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+    background: var(--dark-blue);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 3px solid var(--gold);
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section {
+        padding: 25px 15px;
+    }
+}
